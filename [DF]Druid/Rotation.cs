@@ -162,8 +162,6 @@ if (!me.HasPermanent("Cat Form") && Api.Spellbook.CanCast("Cat Form") )
 				}
 				
 			
-			
-		
 		if (Api.Spellbook.CanCast("Tiger's Fury") && me.HasPermanent("Cat Form") && !Api.Spellbook.OnCooldown("Tiger's Fury"))
 				{
 			Console.ForegroundColor = ConsoleColor.Green;
@@ -174,6 +172,9 @@ if (!me.HasPermanent("Cat Form") && Api.Spellbook.CanCast("Cat Form") )
 					return true;
 				}
 				}
+			
+		
+		
 				
 		if (Api.Spellbook.CanCast("Rip") && !target.HasAura("Rip") && me.HasAura("Tiger's Fury") && points >= 3 && me.HasPermanent("Cat Form") )
 		{
@@ -361,6 +362,18 @@ if (me.HasAura("Travel Form"))
     Console.WriteLine("Have aura Travel Form");
     Console.ResetColor();
 }
+if (Api.Spellbook.CanCast("Rebirth"))
+{
+    Console.ForegroundColor = ConsoleColor.Green;
+    Console.WriteLine("Can Cast Rebirth");
+    Console.ResetColor();
+}
+else
+{
+    Console.ForegroundColor = ConsoleColor.Green;
+    Console.WriteLine("Can't Cast Rebirth");
+    Console.ResetColor();
+}	
 
 // Assuming there's a method HasPermanent for checking permanent auras
 if (me.HasPermanent("Travel Form"))
